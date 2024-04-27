@@ -1,5 +1,5 @@
 ! ================================================================================================================================ !
-submodule (libcoulcc) libcoulcc_coulcc
+submodule (libcoulcc) libcoulcc__coulcc
   !! Submodule containing the implementation of the COULCC procedure
 
   implicit none
@@ -116,10 +116,10 @@ contains
     !!
     !! CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-    use libcoulcc_steed,               only: RERR, NFP, N11, NPQ, N20, KAS
-    use libcoulcc_rcfcm1,              only: PK, EK, CLGAA, CLGAB, CLGBB, DSIG, TPK1, W, RL, FCL1, Q, GAM, HCL, HPL, FCM, HCL1, &
+    use libcoulcc__steed,               only: RERR, NFP, N11, NPQ, N20, KAS
+    use libcoulcc__rcfcm1,              only: PK, EK, CLGAA, CLGAB, CLGBB, DSIG, TPK1, W, RL, FCL1, Q, GAM, HCL, HPL, FCM, HCL1, &
                                              ALPHA, BETA, PL
-    use libcoulcc_constants,           only: ZERO, HALF, ONE, TWO, CI
+    use libcoulcc__constants,           only: ZERO, HALF, ONE, TWO, CI
     use iso_fortran_env,               only: dp => real64, qp => real128, stderr => error_unit
     use stdlib_specialfunctions_gamma, only: log_gamma
 
@@ -831,7 +831,7 @@ contains
     !! Evaluate CF1  =  F   =  F'(ZL,ETA,X)/F(ZL,ETA,X)
     !! using complex arithmetic
 
-    use libcoulcc_constants, only: ONE, TWO
+    use libcoulcc__constants, only: ONE, TWO
     use iso_fortran_env,     only: dp => real64, stderr => error_unit
 
     ! IMPLICIT COMPLEX(dp)(A-H,O-Z)
@@ -936,7 +936,7 @@ contains
     !!                                    ZL             ZL
     !!     where PM = omega.i
 
-    use libcoulcc_constants, only: ZERO, HALF, ONE, TWO
+    use libcoulcc__constants, only: ZERO, HALF, ONE, TWO
     use iso_fortran_env,     only: dp => real64, stderr => error_unit
 
     ! IMPLICIT COMPLEX(dp)(A-H,O-Z)
@@ -1027,7 +1027,7 @@ contains
     !! and
     !!   Z  = TWO*P*X
 
-    use libcoulcc_constants, only: ZERO, ONE, TWO, CI
+    use libcoulcc__constants, only: ZERO, ONE, TWO, CI
     use iso_fortran_env,     only: dp => real64, qp => real128
 
     ! IMPLICIT REAL(dp)(A-H,O-Z)
@@ -1168,7 +1168,7 @@ contains
     !!        using real arithmetic
 
     ! IMPLICIT REAL(dp)(A-H,O-Z)
-    use libcoulcc_constants, only: ONE, TWO
+    use libcoulcc__constants, only: ONE, TWO
     use iso_fortran_env,     only: dp => real64
 
     integer, intent(in) :: LIMIT
@@ -1265,7 +1265,7 @@ contains
     !!      useful number also input:  FPMAX = near-largest f.p. number
 
     ! IMPLICIT COMPLEX(dp)(A-H,O-Z)
-    use libcoulcc_constants, only: ZERO, ONE
+    use libcoulcc__constants, only: ZERO, ONE
     use iso_fortran_env,     only: dp => real64
 
     complex(dp) :: F20
@@ -1378,7 +1378,7 @@ contains
 
     ! IMPLICIT COMPLEX(dp)(A-H,O-Z)
 
-    use libcoulcc_constants, only: ZERO, ONE, TWO, CI
+    use libcoulcc__constants, only: ZERO, ONE, TWO, CI
     use iso_fortran_env,     only: dp => real64
 
     complex(dp) :: CF1A
@@ -1560,7 +1560,7 @@ contains
     !!
     !! -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
-    use libcoulcc_rcfcm2, only: MP12, X1, EVEN, M, M2M1
+    use libcoulcc__rcfcm2, only: MP12, X1, EVEN, M, M2M1
     use iso_fortran_env,  only: dp => real64
 
     ! IMPLICIT COMPLEX(dp)(A-H,O-Z)
@@ -1686,5 +1686,5 @@ contains
   end function digamma
 
 ! ================================================================================================================================ !
-end submodule libcoulcc_coulcc
+end submodule libcoulcc__coulcc
 ! ================================================================================================================================ !

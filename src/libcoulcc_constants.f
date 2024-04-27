@@ -1,5 +1,5 @@
 ! ================================================================================================================================ !
-module libcoulcc_constants
+module libcoulcc__constants
   !! Contains constants used throughout coulcc
 
   use iso_fortran_env, only: dp => real64
@@ -25,5 +25,5 @@ module libcoulcc_constants
   complex(dp), parameter :: CI = (zero, one)
 
 ! ================================================================================================================================ !
-end module libcoulcc_constants
+end module libcoulcc__constants
 ! ================================================================================================================================ !

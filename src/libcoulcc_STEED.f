@@ -1,5 +1,5 @@
 ! ================================================================================================================================ !
-module libcoulcc_steed
+module libcoulcc__steed
   !!  Replaces the COMMON /STEED/ in the original COULCC
   !!   common blocks are for information & storage only.
   !!   (they are not essential to working of the code)
@@ -27,5 +27,5 @@ module libcoulcc_steed
   real(dp) :: RERR
 
 ! ================================================================================================================================ !
-end module libcoulcc_steed
+end module libcoulcc__steed
 ! ================================================================================================================================ !
