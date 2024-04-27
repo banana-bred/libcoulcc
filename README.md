@@ -18,6 +18,11 @@ The archive file `liblibcoulcc.a` and `.mod` files will be placed in the generat
 These files are necessary to compile another program that uses this library.
 
 ## Using this version of `COULCC()`
+To use this project within your [fpm](https://github.com/fortran-lang/fpm) project, add the following to your `fpm.toml` file:
+
+    [dependencies]
+    libcoulcc = { git="https://github.com/banana-bred/libcoulcc" }
+
 The module `libcoulcc` contains the following public procedures :
 
 - `coulf(l,eta,x)` : return the regular Coulomb function $F_l(\eta,x)$
