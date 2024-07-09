@@ -199,7 +199,7 @@ contains
 
     if( .NOT. present(message)) error stop
 
-    write(stderr,'("STOP",X,"::",X,A)') message
+    write(stderr,'("STOP",1X,"::",1X,A)') message
 
     write(stderr,*)
 
