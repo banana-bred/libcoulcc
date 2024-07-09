@@ -10,7 +10,6 @@ module libcoulcc
   !! the procedure "COULCC()" in coulcc_submodule.f for more
   !! details.
 
-
   implicit none
 
   private

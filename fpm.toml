@@ -5,6 +5,9 @@ maintainer = "j.forer@posteo.net"
 description = "Calculate complex-valued Coulomb and Bessel functions"
 keywords = [ "complex", "special", "coulomb", "bessel", "functions" ]
 
+[build]
+# module-naming = true
+
 [library]
 source-dir = "src"
 
