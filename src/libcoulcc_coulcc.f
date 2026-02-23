@@ -121,7 +121,7 @@ contains
                                              ALPHA, BETA, PL
     use libcoulcc__constants,           only: ZERO, HALF, ONE, TWO, CI
     use iso_fortran_env,               only: dp => real64, qp => real128, stderr => error_unit
-    use stdlib_specialfunctions_gamma, only: log_gamma
+    use libcoulcc__functions, only: log_gamma
 
     ! IMPLICIT COMPLEX(dp) (A-H,O-Z)
     integer, intent(in)    :: NL

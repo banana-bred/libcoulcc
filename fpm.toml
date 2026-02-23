@@ -1,5 +1,5 @@
 name = "libcoulcc"
-version = "1.0.0"
+version = "1.0.1"
 license = "MIT"
 maintainer = "j.forer@posteo.net"
 description = "Calculate complex-valued Coulomb and Bessel functions"
@@ -10,9 +10,6 @@ keywords = [ "complex", "special", "coulomb", "bessel", "functions" ]
 
 [library]
 source-dir = "src"
-
-[dependencies]
-stdlib = "*"
 
 [fortran]
 implicit-typing = false
